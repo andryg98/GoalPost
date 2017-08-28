@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		655A21731F540A50004C576D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A21721F540A50004C576D /* AppDelegate.swift */; };
-		655A21751F540A50004C576D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A21741F540A50004C576D /* ViewController.swift */; };
+		655A21751F540A50004C576D /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A21741F540A50004C576D /* GoalsVC.swift */; };
 		655A21781F540A50004C576D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655A21761F540A50004C576D /* Main.storyboard */; };
 		655A217B1F540A50004C576D /* goalpost_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 655A21791F540A50004C576D /* goalpost_app.xcdatamodeld */; };
 		655A217D1F540A50004C576D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 655A217C1F540A50004C576D /* Assets.xcassets */; };
 		655A21801F540A50004C576D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655A217E1F540A50004C576D /* LaunchScreen.storyboard */; };
+		655A218C1F5411A7004C576D /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A218B1F5411A7004C576D /* GoalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		655A216F1F540A50004C576D /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655A21721F540A50004C576D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		655A21741F540A50004C576D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		655A21741F540A50004C576D /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		655A21771F540A50004C576D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		655A217A1F540A50004C576D /* goalpost_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalpost_app.xcdatamodel; sourceTree = "<group>"; };
 		655A217C1F540A50004C576D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		655A217F1F540A50004C576D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		655A21811F540A50004C576D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655A218B1F5411A7004C576D /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,11 @@
 		655A21711F540A50004C576D /* goalpost-app */ = {
 			isa = PBXGroup;
 			children = (
+				655A218A1F540A9B004C576D /* Extensions */,
+				655A21891F540A6D004C576D /* Enums */,
+				655A21881F540A6B004C576D /* View */,
+				655A21871F540A68004C576D /* Controller */,
 				655A21721F540A50004C576D /* AppDelegate.swift */,
-				655A21741F540A50004C576D /* ViewController.swift */,
 				655A21761F540A50004C576D /* Main.storyboard */,
 				655A217C1F540A50004C576D /* Assets.xcassets */,
 				655A217E1F540A50004C576D /* LaunchScreen.storyboard */,
@@ -65,6 +70,36 @@
 				655A21791F540A50004C576D /* goalpost_app.xcdatamodeld */,
 			);
 			path = "goalpost-app";
+			sourceTree = "<group>";
+		};
+		655A21871F540A68004C576D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				655A21741F540A50004C576D /* GoalsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		655A21881F540A6B004C576D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				655A218B1F5411A7004C576D /* GoalCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		655A21891F540A6D004C576D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		655A218A1F540A9B004C576D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655A21751F540A50004C576D /* ViewController.swift in Sources */,
+				655A218C1F5411A7004C576D /* GoalCell.swift in Sources */,
+				655A21751F540A50004C576D /* GoalsVC.swift in Sources */,
 				655A21731F540A50004C576D /* AppDelegate.swift in Sources */,
 				655A217B1F540A50004C576D /* goalpost_app.xcdatamodeld in Sources */,
 			);
