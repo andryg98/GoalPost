@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		652BE8871F54452600505340 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652BE8861F54452600505340 /* GoalType.swift */; };
+		652BE8891F544A9B00505340 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652BE8881F544A9B00505340 /* CreateGoalVC.swift */; };
 		655A21731F540A50004C576D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A21721F540A50004C576D /* AppDelegate.swift */; };
 		655A21751F540A50004C576D /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A21741F540A50004C576D /* GoalsVC.swift */; };
 		655A21781F540A50004C576D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 655A21761F540A50004C576D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		652BE8861F54452600505340 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		652BE8881F544A9B00505340 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
 		655A216F1F540A50004C576D /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		655A21721F540A50004C576D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		655A21741F540A50004C576D /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				655A21741F540A50004C576D /* GoalsVC.swift */,
+				652BE8881F544A9B00505340 /* CreateGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				655A218C1F5411A7004C576D /* GoalCell.swift in Sources */,
+				652BE8891F544A9B00505340 /* CreateGoalVC.swift in Sources */,
 				652BE8871F54452600505340 /* GoalType.swift in Sources */,
 				655A21751F540A50004C576D /* GoalsVC.swift in Sources */,
 				655A21731F540A50004C576D /* AppDelegate.swift in Sources */,
