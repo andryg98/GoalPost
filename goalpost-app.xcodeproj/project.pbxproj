@@ -19,6 +19,7 @@
 		655A218C1F5411A7004C576D /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A218B1F5411A7004C576D /* GoalCell.swift */; };
 		657388031F54787100BB5418 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657388021F54787100BB5418 /* UIViewExt.swift */; };
 		659C3D031F5570CC00F00735 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C3D021F5570CC00F00735 /* UIButtonExt.swift */; };
+		659C3D051F55745F00F00735 /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C3D041F55745F00F00735 /* FinishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		655A218B1F5411A7004C576D /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		657388021F54787100BB5418 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		659C3D021F5570CC00F00735 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		659C3D041F55745F00F00735 /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				655A21741F540A50004C576D /* GoalsVC.swift */,
 				652BE8881F544A9B00505340 /* CreateGoalVC.swift */,
+				659C3D041F55745F00F00735 /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				655A21731F540A50004C576D /* AppDelegate.swift in Sources */,
 				653AFDCA1F5473500096EA69 /* UIViewControllerExt.swift in Sources */,
 				659C3D031F5570CC00F00735 /* UIButtonExt.swift in Sources */,
+				659C3D051F55745F00F00735 /* FinishGoalVC.swift in Sources */,
 				655A217B1F540A50004C576D /* goalpost_app.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
