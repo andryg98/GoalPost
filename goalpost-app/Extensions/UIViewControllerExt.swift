@@ -21,6 +21,7 @@ extension UIViewController {
         present(viewControllerToPresent, animated: false, completion: nil)
     }
     
+    //Present a new view and dismiss itself
     func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {
         let transition = CATransition()
         transition.duration = 0.3
