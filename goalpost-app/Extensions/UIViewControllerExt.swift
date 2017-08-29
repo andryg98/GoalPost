@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIViewController {
+    //Present a new view
     func presentDetail(_ viewControllerToPresent: UIViewController) {
+        //Create a CATransition with custom duration and type
         let transition = CATransition()
         transition.duration = 0.3
         transition.type = kCATransitionPush
@@ -19,6 +21,7 @@ extension UIViewController {
         present(viewControllerToPresent, animated: false, completion: nil)
     }
     
+    //Dismiss the current view
     func dismissDetail() {
         let transition = CATransition()
         transition.duration = 0.3
