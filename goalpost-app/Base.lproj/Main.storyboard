@@ -355,6 +355,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrA-TF-XJg">
                                         <rect key="frame" x="15" y="37" width="14" height="25"/>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnWasPressed:" destination="J4R-7M-7c7" eventType="touchUpInside" id="sHg-Xg-1kc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14889826819999999" green="0.81889406620000005" blue="0.20480652099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
