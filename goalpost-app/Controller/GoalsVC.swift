@@ -14,14 +14,18 @@ let appDelegate = UIApplication.shared.delegate as? AppDelegate
 class GoalsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var undoBtn: UIButton!
+    @IBOutlet weak var undoView: UIView!
     
     var goals: [Goal] = []
+    var undoBtnIsPressed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = false
+        undoView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +34,7 @@ class GoalsVC: UIViewController {
         tableView.reloadData()
     }
 
+    
     func fetchCoreDataObjects() {
         self.fetch { (complete) in
             if complete {
@@ -41,6 +46,11 @@ class GoalsVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func undoBtnWasPressed(_ sender: Any) {
+        undoBtnIsPressed = true
+    }
+    
     
     @IBAction func addGoalButtonWasPressed(_ sender: Any) {
         guard let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else { return }
@@ -79,9 +89,28 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            self.removeGoal(atIndexPath: indexPath)
-            self.fetchCoreDataObjects()
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            //WAIT HERE FOR 3 SECONDS IF THE USER PRESS THE UNDO BUTTON
+//            self.removeGoal(atIndexPath: indexPath)
+//            self.fetchCoreDataObjects()
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.undoView.isHidden = false
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                if self.undoBtnIsPressed {
+                    self.undoBtnIsPressed = false
+                } else {
+                    self.removeGoal(atIndexPath: indexPath)
+                    self.fetchCoreDataObjects()
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                    
+                }
+                
+                self.undoView.isHidden = true
+            })
+            
+
+            
+            
         }
         
         let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
@@ -89,13 +118,12 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
-        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.009946824187, blue: 0, alpha: 1)
         addAction.backgroundColor = #colorLiteral(red: 0.9771530032, green: 0.7062081099, blue: 0.1748393774, alpha: 1)
         return [deleteAction, addAction]
     }
     
 }
-
 
 //Fetch data from the persistent storage
 extension GoalsVC {
